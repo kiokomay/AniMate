@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/profile.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Profile</title>
+  </head>
+  <body>
+  
+      <div class="header">
+        <h1 id="site-name"><a href="/">AniMate</a></h1>
+      </div>
+      <div class="user-header">
+        <p id="my-profile" >My Profile</p>
+      </div>
+      <div class="list">
+        <button><a href="/add-to-list">Add to List</a></button>
+        <div id="card">
+          <% userList.forEach(function(item){ %>
+          <h3>title: <%=item.title%></h3>
+          <h3>score: <%=item.score%> </h3>
+          <h3>episodes: <%=item.episodes%> </h3>
+          <h3>start date: <%=item.start_date%></h3>
+          <h3>end date: <%=item.end_date%> </h3>
+          <img src="<%=item.image_url%>" id="poster"/>
+          <button><a href="/edit-list/?id=<%=item._id%>">Edit<a></button>
+            <button><a href="/user-list/delete/?id=<%=item._id%>">delete</a></button>
+          <% }) %>
+        </div>
+      </div>
+      <div class="footer"></div>
+    
+  </body>
+</html>

@@ -1,0 +1,34 @@
+html,
+body {
+  background-color: black;
+}
+
+.header {
+  position: relative;
+  height: 120px;
+  background-color: black;
+  grid-area: header;
+}
+
+#site-name {
+  font-family: "Goldman", cursive;
+  color: white;
+  margin-left: 40px;
+  margin-top: 0px;
+  padding-top: 40px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#title {
+  color: white;
+  text-align: center;
+}
+
+#form-edit {
+  color: white;
+  text-align: center;
+}

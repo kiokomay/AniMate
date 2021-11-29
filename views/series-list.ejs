@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/series-list.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <title>Series Tier List</title>
+  </head>
+  <body>
+      <div class="header">
+        <h1 id="site-name"><a href="/">AniMate</a></h1>
+        <form method="GET" action="/profile">
+          <button type="submit" id="profile-btn">My Profile</button>
+        </form>
+      </div>
+      <div class="intro">
+        <p id="welcome">browse the top anime series right now</p>
+      </div>
+      <div id="list">
+        <% seriesList.forEach(function(series){ %>
+          <div id="card">
+            <h2><%=series.rank %> </h2>
+            <h3>title: <%=series.title%></h3>
+            <h3>score: <%=series.score%> </h3>
+            <h3>episodes: <%=series.episodes%> </h3>
+            <h3>start date: <%=series.start_date%></h3>
+            <h3>end date: <%=series.end_date%> </h3>
+            <img src="<%=series.image_url%>" />
+            <form action="/user-list" method="POST" autocomplete="off">
+              <input value="<%=series.title%>" type="hidden" name="title" />
+              <input value="<%=series.image_url%>" type="hidden" name="imageUrl" />
+              <input value="<%=series.episodes%>" type= "hidden" name="episodes" />
+              <input value="<%=series.start_date%>" type="hidden" name="startDate" /> 
+              <input value="<%=series.end_date%>" type="hidden" name="endDate" />
+              <input value="<%=series.score%>" type="hidden" name="score" />
+            <button type="submit">add to Watch Later</button>
+            </form>
+        </div>
+        <% }) %>
+    <div class="footer">
+  </body>
+</html>

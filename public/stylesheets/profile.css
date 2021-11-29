@@ -1,0 +1,84 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 2.4fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "intro intro"
+    "list list"
+    "footer footer";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  height: 120px;
+  background-color: black;
+  grid-area: header;
+}
+
+#site-name {
+  font-family: "Goldman", cursive;
+  color: white;
+  margin-left: 40px;
+  margin-top: 0px;
+  padding-top: 40px;
+}
+
+#my-profile {
+  margin-top: 0px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.user-header {
+  color: white;
+  background-color: black;
+  height: 400px;
+  text-align: center;
+  grid-area: intro;
+}
+
+#anime-poster {
+  width: 200px;
+  height: 300px;
+  float: left;
+  clear: both;
+  border: 1px solid red;
+  margin-left: 250px;
+}
+
+#card {
+  /* background-color:  */
+  display: list-item;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+#poster {
+  max-height: 300px;
+}
+
+.list {
+  background-color: grey;
+  grid-area: list;
+}
+
+.footer {
+  background-color: black;
+  grid-area: footer;
+}
+
+button {
+  color: black;
+}

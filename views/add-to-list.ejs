@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/add-to-list.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="site-name"><a href="/">AniMate</a></h1>
+    </div>
+    <h2 id="title">Add new Anime</h2>
+    <form action="/user-list" method="POST" autocomplete="off" id="form-add">
+      <label>Title: <input type="text" name="title" /> </label><br />
+      <label>Image URL: <input type="text" name="imageUrl" /> </label>
+      <label>Episodes: <input type="text" name="episodes" /> </label>
+      <label>Start Date: <input type="text" name="startDate" /> </label>
+      <label>End Date: <input type="text" name="endDate" /> </label>
+      <label>score: <input type="text" name="score" /> </label>
+      <br />
+      <button type="submit" id="profile-redirect">add anime</button>
+    </form>
+  </body>
+</html>

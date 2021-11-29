@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 id="site-name">AniMate</h1>
+        <form method="get" action="/profile">
+          <button type="submit" id="profile-btn">My Profile</button>
+        </form>
+      </div>
+      <div class="intro">
+        <p id="welcome">Welcome to AniMate</p>
+        <p>a resource for anime tier lists</p>
+      </div>
+      <div class="series-list-link">
+        <p id="description">find the top rated anime series of all time</p>
+        <form method="get" action="/series-list" id="series">
+          <button type="submit" id="series-btn">go to list</button>
+        </form>
+      </div>
+      <div class="movies-list-link">
+        <p id="description">find the top rated anime movies of all time</p>
+        <form method="get" action="/movies-list" id="movie">
+          <button type="submit" id="movies-btn">go to list</button>
+        </form>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
